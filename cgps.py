@@ -9,15 +9,14 @@ TOKEN = CGPS_TOKEN
 
 client = Bot(command_prefix=BOT_PREFIX)
 
-# @client.event
-# async def on_message(message):
-#     # We do not want the bot to reply to itself
-#     if message.author == client.user:
-#         return
 
-#     if message.content.startswith('!hello'):
-#         msg = 'Hello {0.author.mention}'.format(message)
-#         await client.send_message(message.channel, msg)
+@client.command(
+    name='hello',
+    pass_context=True)
+async def hello(context):
+    message = 'Hello, {}.'.format(context.message.author.mention)
+    await client.say(message)
+
 
 @client.command(
     name='roll',
