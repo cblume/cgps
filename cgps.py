@@ -1,10 +1,11 @@
 import random
 import re
+from cgps_misc import CGPS_TOKEN
 from discord import Game
 from discord.ext.commands import Bot
 
 BOT_PREFIX = ('?', '!')
-TOKEN = 'NTA2MDQ3Nzk5OTc3MDUwMTEy.Drcd1A.CxpVv_OqdPnDq_K5mD4FI-2lhHw'
+TOKEN = CGPS_TOKEN
 
 client = Bot(command_prefix=BOT_PREFIX)
 
